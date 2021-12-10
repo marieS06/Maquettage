@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- HEAD -->
+
+    <head>
+    <meta charset = "utf-8">
+
+
+        
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <p class="membreactuel"></p>
+            <!-- <a href="inscription.html">S’inscrire</a>
+            <a href="login.html">Se connecter</a> -->
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section><!--<h3> infos pratique:</h3>-->
+            
+        <div class="boitegauche">
+         <!-- <ul>
+                <li>
+            Les admins doivent pouvoir rediger des articles, mais aucun emplacement n'est prévu pour les afficher
+            On choisit que les admins utiliseront de l'html brute pour écrire des articles </li>
+            <li>
+            Les admins doivent pouvoir accepter ou refuser un nouvel auteur/éditeur ainsi que jury </li>
+            <li>
+            Les admins doivent savoir si quelqu'un a demander plusieurs catégories pour son oeuvre</li>
+        </ul>--> 
+           
+            
+        </div>
+        
+        <article>
+            <h4>Bonjour administrateur</h4>
+            <h2>Voici vos nouvelles !</h2>
+            <br><br>
+            <input type="radio" name="adminradio" onclick="onradiobutonclick()"> Rédiger un article             
+
+            <input type="radio" name="adminradio" onclick="onradiobutonclick()"> Voir les nouvelles demande d'inscription 
+            
+            <input type="radio" name="adminradio" onclick="onradiobutonclick()"> Réglez des conflits de catégorie
+
+            <div id="articleadmin" class="invisible">
+                <textarea class="mytextarea" id="article_admin"> </textarea>   
+                <div>          
+                <input type="button" id="article_admin_boutton_voir" value="Voir l'article">
+                <input type="button" id="article_admin_boutton_publier" value="Publier l'article">
+                </div>         
+            </div>     
+            <div id="demandeadmin" class="invisible">
+                <table class="tableau_jury">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>type</th>                    
+                    <th>info</th>
+                    <th>mail</th>
+                    <th>accepter</th>
+                    <th>refuser</th>                   
+                </tr>
+                <tr>
+                    <td>Korben</td>
+                    <td>Dallas</td>
+                    <td>AUTEUR</td>
+                    <td></td>
+                    <td> K.D@zorg.net </td>
+                    <td> <button id="oui_0">accepter</button> </td>
+                    <td> <button id="non_0">refuser</button> </td>                                       
+                </tr>
+
+                <tr>
+                    <td>Diva</td>
+                    <td>Plavalaguna</td>
+                    <td>Juré</td>
+                    <td>Roman étranger <br> documentaire <br> bibliographie</td>
+                    <td> K.D@zorg.net </td>
+                    <td> <button id="oui_1">accepter</button> </td>
+                    <td> <button id="non_1">refuser</button> </td>                                       
+                </tr>                
+
+                </table>
+                </div>
+
+
+            <div id="conflitadmin" class="invisible">
+                <table class="tableau_jury">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>email</th>
+                        <th>Francais</th>                    
+                        <th>Etranger</th>
+                        <th>Documentaire</th>
+                        <th>Bibliographie</th>
+                        <th>conflit réglé</th>
+                                           
+                    </tr>
+                    <tr>
+                        <td>Korben</td>
+                        <td>Dallas</td>
+                        <td> <A HREF="mailto:K.D@zorg.net">K.D@zorg.net</A>  </td>
+
+                        <td><input type="checkbox" checked></td>
+                        <td><input type="checkbox" ></td>
+                        <td><input type="checkbox" checked></td>
+                        <td><input type="checkbox" checked></td>   
+                        <td><input type="button" value="supprimer"></td>                                                                                    
+                    </tr>
+                  
+    
+                    </table>                
+            </div>
+
+<!-- 
+
+            <br><br>
+              <input type="text" id="creanom" readonly>
+              &ensp;
+              <input type="text" id="creaprenom" readonly>
+              <br>
+              <br>
+              <textarea class="biographie" id="creabio"> </textarea>             
+
+              <input type="button" id="update_bio" value="mettre à jour votre biographie">
+              <br>
+              <br>
+              <div>    
+              <input type="checkbox" id="submitouvre">         
+              Voulez vous soumettre une oeuvre
+            </div>
+            <br>
+            <form id="formulaire_invisible" class="invisible">
+                <div>
+                    Nom de l'oeuvre
+                    <input class="textoeuvre," type="text" id="NvOeuvre_nom" required >
+                </div>
+                <br>
+                <div>
+                    Résumé
+                    <br>
+                    <textarea class="mytextarea" id="NvOeuvre_resume" required></textarea>
+                </div>
+
+                <br>            
+                <div>
+                    <input type="checkbox" value="Roman Français" id="cfr">
+                    Roman Français
+                    <input type="checkbox"  value="Roman Etranger" id="cre">
+                    Roman Etranger
+                    <input type="checkbox"  value="Documentaire" id="cdc">
+                    Documentaire 
+                    <input type="checkbox"  value="Biographie" id="cbb">
+                    Biographie
+
+                </div>
+                <br>            
+                <div>
+                    Lien commercial :
+                    <input class="textoeuvre" type="text" id="NvOeuvre_com" >
+                </div>
+                <br>              
+                <div>
+                    <label for="file">Sélectionner le fichier à envoyer</label>
+                    <input type="file" id="fileUpload" name="file" accept=".pdf" required>
+                    <input type="submit" value="enregistrer" class="pass" id="send_file">
+                </div>
+
+                
+                <br> 
+            </form>     -->
+
+            <p id="LesAdminsOntDit"></p>
+        </article>
+    </section>
+
+
+           
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+      
+        <script  src="bbiblio.js"></script>
+        
+</body>
+</html>

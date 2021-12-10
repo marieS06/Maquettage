@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+
+<!-- HEAD -->
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+       
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <p class="membreactuel"></p>
+            <!-- <a href="">S’inscrire</a>
+            <a href="">Se connecter</a> -->
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section><!--<h3> infos pratique:</h3>-->
+        <div class="boitegauche">
+            <div class="condition">
+            </div>
+            <!--
+            Au chargement de cette page, les categories choisies par le juré doivent être connues
+            une requete est envoyé a la base de données pour recevoir toutes les oeuvres notés dans les categories
+            selectionnées par le juré lors de l'inscription, elles seront automatiquement paginés par le code. 
+            Ici il s'agit d'un exemple.
+            Une autre requete pour les oeuvres restantes à noter devra être faites. 
+            Le code des bouttons devra aussi être automatique mais je ne sais pas comment donner des "id" 
+            au fur et a mesure-->
+
+        </div>
+        
+        <article>
+            <h4>Bonjour </h4>
+            <h2>Mes notes</h2>
+            
+              <br>
+              
+              <div>
+                <input type="checkbox" id="c0"  value="Roman Français" disabled>
+                 Roman Français
+                <input type="checkbox" id="c1"  value="Roman Etranger" disabled>
+                 Roman Etranger
+                <input type="checkbox" id="c2" value="Documentaire" disabled>
+                 Documentaire 
+                <input type="checkbox" id="c3" value="Biographie" disabled>
+                 Biographie
+                <input type="button" id="pour_comparaison" value="Comparer par catégories">
+              </div>
+               <br>
+               <br> 
+               <table class="tableau_jury">
+                
+                
+                <tr>
+                    <th>OEUVRE</th>
+                    <th>CATEGORIE</th>
+                    <th>AUTEUR</th>
+                    <th>STYLE</th>
+                    <th>ILLUSTRATIONS</th>
+                    <th>MISE EN PAGE</th>
+                    <th>EMOTIONS</th>
+                    <th>COMPARER</th>
+                    <th>Info</th>
+                   
+                </tr>
+                <tr>
+                    <td><a href="http://www.clg-exupery-ermont.ac-versailles.fr/IMG/pdf/fiche_prof_the_fift_element.pdf" download>Une retraite paisible</a></td>
+                    <td>FRANCAIS</td>
+                    <td>K.Dallas</td>
+                    <td> 6 </td>
+                    <td> 7 </td>
+                    <td> 4 </td>
+                    <td> 10  </td>
+                    <td> <button id="comp_0">comparer</button> </td>
+                    <td> <button id="voir_0">voir</button> </td>
+                    
+                   
+                </tr>
+                <tr>
+                    <td> L'art de la guerre moderne</td>
+                    <td>DOCUMENTAIRE</td>
+                    <td> J.B.E.Zorg  </td>
+                    <td> 5  </td>
+                    <td> 8  </td>
+                    <td> 9  </td>
+                    <td> 4  </td>
+                    <td> <button id="comp_1">comparer</button> </td>
+                    <td> <button id="voir_1">voir</button> </td>
+                   
+             </tr>
+                </table>
+                <h1 id="proposition">Mes propositions</h1>
+                <h2>Quelques oeuvres à noter</h2>
+
+                
+                <table class="tableau_jury">
+                
+                    <tr>
+                        <th>OEUVRE</th>
+                        <th>CATEGORIE</th>
+                        <th>AUTEUR</th>
+                        <th>STYLE</th>
+                        <th>ILLUSTRATIONS</th>
+                        <th>MISE EN PAGE</th>
+                        <th>EMOTIONS</th>
+                        <th>COMPARER</th>
+                       
+                    </tr>
+                    <tr>
+                        <td>OEUVRE10</td>
+                        <td>FRANCAIS </td>
+                        <td>AUTEURz</td>
+                        <!-- comme le code sera genere automatiquement je donne le meme numero, ici 10 a toutes les ID -->
+                        <td> <input type="number" id="note_sty_10" min="0" max="10"> </td>
+                        <td> <input type="number" id="note_ill_10" min="0" max="10"> </td>
+                        <td> <input type="number" id="note_mep_10" min="0" max="10">  </td>
+                        <td> <input type="number" id="note_emo_10" min="0" max="10">  </td>
+                        <td> <button id="comp_10">comparer</button>  </td>
+                        
+                       
+                    </tr>
+                    <tr>
+                        <td> XX  </td>
+                        <td>FRANCAIS</td>
+                        <td>XX  </td>
+                        <td> <input type="number" id="note_sty_11" min="0" max="10"> </td>
+                        <td> <input type="number" id="note_ill_11" min="0" max="10"> </td>
+                        <td> <input type="number" id="note_mep_11" min="0" max="10"> </td>
+                        <td> <input type="number" id="note_emo_11" min="0" max="10"> </td>
+                        <td> <button id="comp_11">comparer</button> </td>
+                       
+                 </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button id="save">sauvegarder mes notes</button>
+                   
+            
+<p id="montrexml"></p>
+
+           
+                </article>
+            </section>
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script  src="bbiblio.js"></script>
+        
+
+</body>
+</html>

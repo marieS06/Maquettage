@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+   
+
+<!-- HEAD -->
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+       
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <p class="membreactuel"></p>
+            <!-- <a href="inscription.html">S’inscrire</a>
+            <a href="login.html">Se connecter</a> -->
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section>
+        <div class="boitegauche">
+            <div class="condition">
+            </div>
+
+           
+          <!--Par défaut, une œuvre concourt pour sa catégorie. Si l’œuvre peut concourir pour plusieurs catégories, les administrateurs prendront alors contact avec l’auteur/éditeur, une œuvre ne pouvant concourir que pour une seule catégorie.--> 
+        </div>
+        
+        <article>
+            <h4>Bonjour créateur</h4>
+            <h2>Votre profil</h2>
+            <br><br>
+              <input type="text" id="creanom" readonly>
+              &ensp;
+              <input type="text" id="creaprenom" readonly>
+              <br>
+              <br>
+              <textarea class="biographie" id="creabio"> </textarea>             
+
+              <input type="button" id="update_bio" value="mettre à jour votre biographie">
+              <br>
+              <br>
+              <div>    
+              <input type="checkbox" id="submitouvre">         
+              Voulez vous soumettre une oeuvre
+            </div>
+            <br>
+            <form id="formulaire_invisible" class="invisible">
+                <div>
+                    Nom de l'oeuvre
+                    <input class="textoeuvre," type="text" id="NvOeuvre_nom" required >
+                </div>
+                <br>
+                <div>
+                    Résumé
+                    <br>
+                    <textarea class="mytextarea" id="NvOeuvre_resume" required></textarea>
+                </div>
+
+                <br>            
+                <div>
+                    <input type="checkbox" value="Roman Français" id="cfr">
+                    Roman Français
+                    <input type="checkbox"  value="Roman Etranger" id="cre">
+                    Roman Etranger
+                    <input type="checkbox"  value="Documentaire" id="cdc">
+                    Documentaire 
+                    <input type="checkbox"  value="Biographie" id="cbb">
+                    Biographie
+
+                </div>
+                <br>            
+                <div>
+                    Lien commercial :
+                    <input class="textoeuvre" type="text" id="NvOeuvre_com" >
+                </div>
+                <br>              
+                <div>
+                    <label for="fileUpload">Sélectionner le fichier à envoyer</label>
+                    <input type="file" id="fileUpload" name="file" accept=".pdf" required>
+                    <input type="submit" value="enregistrer" class="pass" id="send_file">
+                </div>
+
+                
+                <br> 
+            </form>    
+
+            <p id="nvbio"></p>
+
+
+        </article>
+        </section>
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script src="bbiblio.js"></script>
+        
+
+</body>
+</html>

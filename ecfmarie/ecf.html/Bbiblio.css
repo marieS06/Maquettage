@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202020;
+  background-color: #E8E8E8;
+}
+
+/* HEADER */
+/* logo */
+#logo1{
+    font-weight: bold;
+    font-size: 2em;
+}
+#logo2{
+    font-weight: normal;
+    font-size: 1.4em;
+    font-style: italic;
+}
+#logo3{
+    font-weight: normal;
+    font-size: 2em;
+    font-style: italic;
+}
+
+/* header */
+header {
+  padding: 30px;
+  text-align: left;  
+}
+/* slogan */
+#slogan{
+    font-weight: normal;
+    font-size: 1em;
+}
+
+/* menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #202020;
+    width: 95%;
+}
+
+nav li {
+    float: right;
+    
+    margin-right: 5%;
+  }
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+nav li a:hover {
+    background-color: #606060;
+  }
+
+/* menu de connection inscription profil */
+.profil {
+    float: right;
+    width: 20%;
+    height: auto; 
+    margin-right: 5%;
+  }
+
+.profil a{
+    margin-right: 5%;
+    text-decoration: none;
+    color: #202020;
+}
+
+.profil a:hover{
+    color: #606060;
+}
+
+/* Boite de gauche */
+.boitegauche {
+  float: left;
+  width: 20%;
+  height: 100%; 
+  padding: 20px;
+}
+
+/* Boite de droite */
+article {
+    float: left;
+    padding-left: 5%;
+    width: 70%;  
+    background-color: #f1f1f1;
+  }
+
+article h4 {
+    width: 100%;
+    font-size: 1.4em;
+    padding: 2% 2% 0% 2%;
+    text-decoration: underline;
+    background-color: #E8E8E8;
+    margin-bottom: 0%;
+    margin-top: 5%;
+}
+
+article h2 {
+    width: 100%;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0% 2% 2% 2%;
+    background-color: #E8E8E8;
+    margin: 0%;
+}
+
+section h3 {
+  width: 100%;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0% 5% 0% 5%;
+  background-color: #E8E8E8;
+  margin: 0%;
+}
+article h3 {
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 2% 2% 2% 2%;
+    background-color: #E8E8E8;
+    margin: 0%;
+}
+
+.formulaire{
+    padding-top: 2% ;
+}
+
+#email{
+    width: 50%;
+    
+    background-color:#ffffff;
+}
+
+#motivation{
+    width: 100%;
+    min-height: 100px;
+}
+
+/* footer */
+footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+ /* Gagnant */
+ .Gagnants{
+     width: 20%;
+     height: auto;
+     position: relative;
+     display: inline-block;
+     margin: 2%;
+     padding: 2%;
+     border: 5px solid #202020;   
+ }
+
+ .Gagnants p{
+     font-style: italic;
+     font-size: .8em;
+     color: #202020;
+} 
+
+.Gagnants h5{
+    font-size: 1em;
+    color: #202020;
+} 
+
+
+.img_g{
+    max-width: 200px;
+}
+.text_g{
+    position: relative;
+    display: inline-block;
+}
+
+.Gagnants p:hover {
+    color: #606060;
+  }
+
+  .Gagnants h5:hover {
+    color: #606060;
+  }  
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  #table_historique{
+    margin: 2% 2% 0% 0%;
+    width: 100%;
+    padding: 2%;
+  }
+
+  #table_historique td{    
+    padding: 2%;
+    border: 1px solid #202020;  
+  }
+
+  /* CONNECTION ET INSCRIPTION */
+.pass{
+    height: 3em;
+    margin: 2%;
+}
+
+/* .tableau_jury{
+  color : #202020;
+  font-size: 1em;
+} */
+
+.biographie{
+  width: 80%;
+  min-height: 100px;
+}
+
+.mytextarea{
+  width: 80%;
+  min-height: 100px;
+}
+
+.textoeuvre{
+  margin-left: 10px;
+  width: 50%;
+  min-height: 30px;
+}
+
+
+.tableau_jury {
+  border: 1px solid #202020;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.tableau_jury td, table.tableau_jury th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.tableau_jury tbody td {
+  font-size: 13px;
+}
+table.tableau_jury tr:nth-child(even) {
+  background: #E8E8E8;
+}
+
+/* Pour rendre visible ou invisible la soumission d'une nouvelle oeuvre */
+.invisible{
+  visibility: hidden;
+}
+

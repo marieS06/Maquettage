@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+
+<!-- HEAD -->
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+        
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <a href="inscription.html">S’inscrire</a>
+            <a href="login.html">Se connecter</a>
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section><h3> infos pratique:</h3>
+        <div class="boitegauche">
+           
+            votre mot de passe,
+            doit contenir une majuscule,
+            une minuscule et au moins un chiffre 
+  
+
+        </div>
+        
+        <article>
+            <!-- <p id="id_jury"></p> -->
+            <h4>Bonjour:</h4> 
+            <h2>C’est votre première connexion, veuillez changer votre mot de passe et remplir votre profil </h2>
+            <p id="affiche_inscription_jury1"></p>
+
+
+            <form id="jury_1"  onsubmit="return verification_inscription_createur(); ">
+                <label for="pass_crea1">mot de passe:</label>
+                <input type="password" name="password1" id="pass_crea1" minlength="10" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required class="pass">
+                <label for="pass_crea2">Veuillez repeter le mot de passe</label>
+                <input type="password" name="password2" id="pass_crea2" minlength="10" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required class="pass">
+
+                <div>
+                    <label for="cprenom">Mon/mes prénom(s)</label>
+                    <input id = "cprenom" type="text" class="pass">
+
+                    <label for="cnom">Mon nom</label>
+                    <input id = "cnom" type="text" class="pass">
+                </div>                
+
+                <p>Votre biographie:</p>
+                <textarea class="biographie">        </textarea>       
+                <input type="submit" value="enregistrer" class="pass">
+            </form>
+            <p id="affiche_createur_1"></p>
+
+
+        </article>
+        </section>
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script  src="bbiblio.js"></script>
+        
+</body>
+</html>

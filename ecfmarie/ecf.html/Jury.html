@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <!-- HEAD -->
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+       
+        
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <p class="membreactuel"></p>
+            <!-- <a href="inscription.html">S’inscrire</a>
+            <a href="login.html">Se connecter</a> -->
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section>
+        <div class="boitegauche">
+            <div class="condition">
+            </div>
+
+           
+
+        </div>
+        
+        <article>
+            <h4>Bonjour membre du jury</h4>
+            <h2>Votre profil</h2>
+            <br>
+            <input type="text" id="jurynom" readonly>
+            &ensp;
+            <input type="text" id="juryprenom" readonly>
+            <br>
+            <p>Voulez vous voir</p>
+            <div>
+            <input type="radio" id="choix1" name="choixjury" checked>
+            <label for="choix1">Juger une oeuvre dans vos catégories ?</label>
+            </div>
+            <br>
+            <div>
+            <input type="radio" id="choix2" name="choixjury">
+            <label for="choix2">Voir l'historique de vos notes ?</label>
+            </div>
+            <br>
+            <input type="button" id="choixjuryB" value="valider">
+            <br>
+            <br> 
+
+            
+        </article>
+        </section>
+           
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script  src="bbiblio.js"></script>
+
+</body>
+</html>

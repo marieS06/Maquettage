@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+
+<!-- HEAD -->
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+       
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            
+                <p class="membreactuel"></p>
+                <!-- <a href="inscription.html">S’inscrire</a>
+                <a href="login.html">Se connecter</a> -->
+            
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section><!--<h3> infos pratique:</h3>-->
+        
+            
+
+            <div class="boitegauche">
+            
+              <!--  Au chargement de cette page, toutes les notes de l'oeuvre choisi par le juré doivent être connues
+                une requete est envoyé a la base de données pour recevoir toutes les notes de cette oeuvre pour tous les jurés, 
+                elles seront automatiquement paginé par le code avec le numéro du juré anonyme. Ici il s'agit d'un exemple.-->
+
+               
+    
+            </div>           
+
+        
+        
+        <article>
+            <h4>Historique d'une oeuvre</h4>
+            <h2>Toutes les notes attribué à l'oeuvre:</h2>
+            
+              <br>
+              
+             
+               <p>'nom de l'oeuvre' par 'nom auteur' (categorie : ' categorie de l'oeuvre')</p>
+               <br> 
+               <table class="tableau_jury">
+                
+                <tr>
+                    <th>Juré N°</th>
+                    <th>STYLE</th>
+                    <th>ILLUSTRATIONS</th>
+                    <th>MISE EN PAGE</th>
+                    <th>EMOTION</th>
+                   
+                   
+                </tr>
+                <tr>
+                    <td> 1  </td>
+                    <td> 6 </td>
+                    <td> 7  </td>
+                    <td> 4 </td>
+                    <td> 10 </td>
+                    
+                    
+                   
+                </tr>
+                <tr>
+                    <td> 2  </td>
+                    <td> 5  </td>
+                    <td> 8 </td>
+                    <td> 9  </td>
+                    <td> 4  </td>
+                    
+                   
+             </tr>
+                </table>
+               
+                   
+
+            </article>
+        </section>
+           
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script  src="bbiblio.js"></script>
+        
+</body>
+</html>

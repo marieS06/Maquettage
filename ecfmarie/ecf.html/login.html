@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- HEAD -->
+
+    <head>
+    <meta charset = "utf-8">
+
+        <title>Bbiblio</title>
+        <link rel="stylesheet" href="Bbiblio.css">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+<!-- BODY -->
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=275605536109503&autoLogAppEvents=1"></script>
+        
+<!-- HEADER -->
+
+        <header>
+        <div class="profil"> 
+            <a href="inscription.html">S’inscrire</a>
+            <a href="login.html">Se connecter</a>
+        </div>
+        <h2><span id="logo1">B</span><span id="logo2">B</span><span id="logo3">iblio</span></h2>
+        
+        <p id="slogan">Grand concours littéraire</p>
+
+        <nav>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="historique.html">Historique des prix</a></li>
+            <li><a href="index.html#reglement">Règlement</a></li>
+            </ul>
+        </nav>
+
+        </header>
+
+        <section>
+        <div class="boitegauche">
+           <!-- Cette page est inutile dans un vrai site web, 
+            c'est pour pouvoir choisir si c'est la premiere connexion ou pas
+            si on est auteur/editeur ou juré-->
+
+
+        </div>
+        
+        <article>
+            <h4>Connexion</h4>
+            <h2> Premiere connexion ? déja venu ? juré ou auteur/editeur ?</h2> <br>
+            <div>
+            <input type="radio" value='1' name="question1" checked> première
+            <input type="radio" value='0' name="question1"> je suis déjà venu
+            </div>
+            <br>
+            <div>
+            <input type="radio" value='1' name="question2" checked> juré
+            <input type="radio" value='0' name="question2"> auteur
+            </div>
+            <br>
+            <div>
+            <button id="login_action" onclick="pasbien()">valider</button>
+            </div>
+            <br>
+
+            <div>
+                <a href="page_admin.html">se connecter je suis adminidtrateur</a>
+            </div>
+            
+          <!--  <p>La vrai page de connexion qui sera lié a la base donnée pour identifier qui on est sera la page suivante</p>-->
+            <a href="Connect.html">se connecter</a>
+            
+
+        <script>
+        function pasbien(){
+            var radioquestion1 = document.getElementsByName('question1');
+            var radioquestion2 = document.getElementsByName('question2');
+            q1 = radioquestion1[0].checked; // il n'y a que deux reponse possible donc je regarde la premiere je deduis la seconde
+            q2 = radioquestion2[0].checked; // il n'y a que deux reponse possible donc je regarde la premiere je deduis la seconde
+
+            // si q1 est true alors c'est la premiere connection sinon c'est la deuxieme
+            // si q2 est true alors c'est un juré sinon un auteur éditeur
+            if(q1){
+                if(q2){page="Jury_1.html"}else{page="Createur_1.html"}
+            }else{
+                if(q2){page="Jury.html"}else{page="Createur.html"}
+            }
+
+
+            window.open(page,"_self")
+        }
+        </script>
+
+
+        </article>
+        </section>
+
+<!-- FOOTER -->
+
+        <footer>
+        <p>Tous droits réservés Bbiblio</p>
+        </footer>
+       
+        <script  src="bbiblio.js"></script>
+        
+
+</body>
+</html>
